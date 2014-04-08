@@ -50,7 +50,9 @@ var draw = function() {
     image(b, 0, 0);
     image(cherry, randomx, cherryY);
     
-    
+    if(cherryY > 600) {
+	cherryY = cherryY - 600;
+    }
 
     if(x > 0 && keyIsPressed && keyCode == LEFT ) {
 	x = x - 33;
