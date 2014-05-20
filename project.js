@@ -3,7 +3,7 @@ var randomx = 400;
 // put variables here, just like kahn academy
 //  var img = processing.loadImage("Fab.jpg");
 
-
+var counter = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10"];
 
 var exampleVar = 10;
 //var pig = processing.rect(30, 20, mouseX, mouseY);
@@ -21,7 +21,7 @@ var exampleFunction = function() {
 var  setup = function() {
     b = loadImage("barn1.jpg");
     pig = loadImage("piggy.png");
-    cherry = loadImage("cherry1.png");
+    cherry = loadImage("CanOfSoup.png");
     gameOver = loadImage("Gameover.png");
     // set up the size of the canvas (you probably don't want to change this!)
     size(800, 600);
@@ -71,7 +71,9 @@ var draw = function() {
     if (x > 700) {
 	image(gameOver, 0, 0);
     }
-
+    if (cherry > x && cherry < x + 75 && cherry > y && cherry < y + 150) {
+        cherry = 15;
+    }
     
 	
 
