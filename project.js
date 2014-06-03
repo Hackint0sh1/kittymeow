@@ -2,7 +2,7 @@ var randomx = 400;
 
 // put variables here, just like kahn academy
 //  var img = processing.loadImage("Fab.jpg");
-
+var music;
 var counter = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10"];
 
 var exampleVar = 10;
@@ -22,7 +22,11 @@ var counter = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10"];
 
 // this code is executed once when the program is started
 var  setup = function() {
-
+    music = new Audio("SSSU.wav");
+	music.controls = true;
+	music.loop = true;
+	music.autoplay = true;
+	document.body.appendChild(music);
     b = loadImage("barn1.jpg");
     pig = loadImage("pig.png");
     cherry = loadImage("CanOfSoup.png");
@@ -43,14 +47,10 @@ var  setup = function() {
 	keyIsPressed = false;
     }
 }
-var draw = function() {
-	music = new Audio("SSSU.mp3");
-	music.controls = true;
-	music.loop = true;
-	music.autoplay = true;
-	document.body.appendChild(music);
+ 
+	
 
-}
+
 
 var draw = function() {
     
